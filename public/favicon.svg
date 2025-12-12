@@ -1,3 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <text y=".9em" font-size="90">PK</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" fill="#FBF8F3"/>
+  <text
+    x="16"
+    y="21"
+    font-family="Georgia, serif"
+    font-size="16"
+    fill="#3D3229"
+    text-anchor="middle"
+  >pk</text>
 </svg>

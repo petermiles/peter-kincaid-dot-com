@@ -3,7 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog', ({ data }) => !data.draft);
-
 const tags = [...new Set(posts.flatMap((post) => post.data.tags))].sort();
 
 function getPostCountForTag(tag: string) {
@@ -11,22 +10,25 @@ function getPostCountForTag(tag: string) {
 }
 ---
 
-<BaseLayout title="Tags" description="Browse posts by tag">
-  <h1 class="text-3xl font-bold mb-8">Tags</h1>
+<BaseLayout title="Topics" description="Browse posts by topic">
+  <h1 class="text-2xl md:text-3xl mb-8" style="font-weight: normal;">
+    Topics
+  </h1>
 
   {tags.length === 0 ? (
-    <p class="text-slate-500">No tags yet.</p>
+    <p style="color: var(--color-brown-light);">Nothing here yet.</p>
   ) : (
-    <div class="flex flex-wrap gap-3">
+    <ul class="space-y-3">
       {tags.map((tag) => (
-        <a
-          href={`/tags/${tag}`}
-          class="px-4 py-2 bg-slate-100 hover:bg-slate-200 rounded-full text-sm font-medium transition-colors"
-        >
-          #{tag}
-          <span class="ml-1 text-slate-500">({getPostCountForTag(tag)})</span>
-        </a>
+        <li>
+          <a href={`/tags/${tag}`} class="inline-flex items-center gap-2">
+            <span>{tag}</span>
+            <span class="text-sm" style="color: var(--color-brown-lighter);">
+              ({getPostCountForTag(tag)})
+            </span>
+          </a>
+        </li>
       ))}
-    </div>
+    </ul>
   )}
 </BaseLayout>

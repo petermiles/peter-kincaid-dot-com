@@ -16,34 +16,27 @@ const { title, description = "Peter Kincaid's personal blog" } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <title>{title} | Peter Kincaid</title>
+    <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-white text-slate-900">
-    <nav class="border-b border-slate-200">
-      <div class="max-w-3xl mx-auto px-6 py-4">
+  <body class="min-h-screen flex flex-col">
+    <header class="pt-12 pb-8 md:pt-16 md:pb-12">
+      <nav class="max-w-xl mx-auto px-6">
         <div class="flex items-center justify-between">
-          <a href="/" class="text-xl font-semibold hover:text-blue-600 transition-colors">
+          <a href="/" class="text-lg" style="color: var(--color-brown);">
             Peter Kincaid
           </a>
-          <div class="flex gap-6 text-sm">
-            <a href="/blog" class="text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
-            <a href="/tags" class="text-slate-600 hover:text-slate-900 transition-colors">Tags</a>
-            <a href="/about" class="text-slate-600 hover:text-slate-900 transition-colors">About</a>
-          </div>
+          <a href="/blog" style="color: var(--color-brown-light);">Writing</a>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
-    <main class="max-w-3xl mx-auto px-6 py-12">
+    <main class="flex-1 max-w-xl mx-auto px-6 w-full pb-16 md:pb-24">
       <slot />
     </main>
 
-    <footer class="border-t border-slate-200 mt-auto">
-      <div class="max-w-3xl mx-auto px-6 py-8 text-center text-sm text-slate-500">
-        <p>&copy; {new Date().getFullYear()} Peter Kincaid. All rights reserved.</p>
+    <footer class="py-12" style="color: var(--color-brown-lighter);">
+      <div class="max-w-xl mx-auto px-6 text-sm">
+        &copy; {new Date().getFullYear()} Peter Kincaid
       </div>
     </footer>
   </body>
