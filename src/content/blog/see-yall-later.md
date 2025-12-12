@@ -1,7 +1,7 @@
 ---
 title: "See Y'all Later"
 description: "My final thoughts and 10 pieces of advice after leaving Apollo."
-date: 2024-12-10
+date: 2025-12-10
 tags: ["career", "advice", "personal"]
 ---
 

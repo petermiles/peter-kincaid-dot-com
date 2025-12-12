@@ -1,7 +1,7 @@
 ---
 title: "It's Never That Important"
 description: "A story about burnout, recovery, and learning that work should never come at the cost of your health."
-date: 2024-09-15
+date: 2025-09-15
 tags: ["burnout", "career", "personal", "health"]
 ---
 

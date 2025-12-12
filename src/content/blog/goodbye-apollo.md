@@ -1,7 +1,7 @@
 ---
 title: "Goodbye Apollo"
 description: "After two transformative years, I'm leaving Apollo to pursue something I believe in deeply."
-date: 2024-11-20
+date: 2025-11-20
 tags: ["career", "personal", "startup"]
 ---
 
